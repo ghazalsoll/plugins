@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            height: 350px;
+        }
+        .red-box{
+            background: blueviolet;
+            margin: 0 auto;
+            display: block;
+            padding: 40px 0;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            opacity: 0;
+            transition: 1s;
+            width: 50%;
+        }
+        .red-box.show{
+            opacity: 1;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <div class="first">
+
+    </div>
+    <div class="red-box">Scroll Magic</div>
+    <div class="third" style="height: 350px;">
+
+    </div>
+    <script>
+        var controller = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({
+            triggerElement:".red-box"
+        })
+        .setClassToggle('.red-box','show')
+        .addTo(controller)
+    </script>
+</body>
+</html>

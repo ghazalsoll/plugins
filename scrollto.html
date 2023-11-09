@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+
+    #box {
+       width:100px;
+       height:100px;
+       background-color:#F00;
+       position:relative;
+       top:0;
+       left:3000px;
+    }
+    
+    </style>
+    
+<body>
+
+<nav>
+   <a href="#">CLICK</a>
+</nav>
+
+<div id="box">BOX</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js" integrity="sha512-PsJ1f4lw0Jrga4wbDOvdWs9DFl88C1vlcH2VQYqgljHBmzmqtGivUkzRHWx2ZxFlnysKUcROqLeuOpYh9q4YNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js" integrity="sha512-xq+0+dRhI6SZOh+lDnMJEju2p2YPINflJLcYrRAsIMaXnJi6/V3lppCMCYsB2MLeF2E93r+fVo0MioY90pNzpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('nav a').on("click", function () {
+
+            //$.scrollTo( '#box', {top:0 , left:800}, {easing:'easeOutElastic'} );
+            $.scrollTo( '#box', 800, {easing:'easeOutElastic', axis:'x'} ); 
+        
+        });
+        
+    </script>
+</body>
+</html>
